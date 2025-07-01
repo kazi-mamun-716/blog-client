@@ -1,10 +1,13 @@
 import React from 'react'
+import HelmetMeta from '../../components/Shared/HelmetMeta'
 
 type Props = {}
+
 
 const Home = (props: Props) => {
   return (
     <main>
+        <HelmetMeta title="Clean Blog - Home" description="A Blog Theme by Start Bootstrap MERN converted by Kazi Mamun" />
       <div className="container px-4 px-lg-5">
             <div className="row gx-4 gx-lg-5 justify-content-center">
                 <div className="col-md-10 col-lg-8 col-xl-7">

@@ -1,10 +1,15 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 type Props = {}
 
 const Contact = (props: Props) => {
-  return (
-    <main className="mb-4">
+    return (
+        <main className="mb-4">
+            <Helmet>
+                <title>Clean Blog - Contact</title>
+                <meta name="description" content="Have questions? I have answers." />
+            </Helmet>
             <div className="container px-4 px-lg-5">
                 <div className="row gx-4 gx-lg-5 justify-content-center">
                     <div className="col-md-10 col-lg-8 col-xl-7">
@@ -28,7 +33,7 @@ const Contact = (props: Props) => {
                                     <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                                 </div>
                                 <div className="form-floating">
-                                    <textarea className="form-control" id="message" placeholder="Enter your message here..." style={{height: "12rem"}} data-sb-validations="required"></textarea>
+                                    <textarea className="form-control" id="message" placeholder="Enter your message here..." style={{ height: "12rem" }} data-sb-validations="required"></textarea>
                                     <label htmlFor="message">Message</label>
                                     <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                 </div>
@@ -42,7 +47,7 @@ const Contact = (props: Props) => {
                                     </div>
                                 </div>
                                 <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
-                                
+
                                 <button className="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
                             </form>
                         </div>
@@ -50,7 +55,7 @@ const Contact = (props: Props) => {
                 </div>
             </div>
         </main>
-  )
+    )
 }
 
 export default Contact

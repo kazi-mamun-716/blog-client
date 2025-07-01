@@ -3,7 +3,7 @@ import headerBgHome from '../../assets/img/home-bg.jpg';
 import headerBgContact from '../../assets/img/contact-bg.jpg';
 import headerBgPost from '../../assets/img/post-bg.jpg';
 import headerBgAbout from '../../assets/img/about-bg.jpg';
-import { useEffect, useRef, useState } from 'react';
+import {useEffect, useRef, useState } from 'react';
 
 type Props = {}
 
@@ -58,13 +58,15 @@ const Navbar = (props: Props) => {
             setHeaderSubTxt("Have questions? I have answers.");
         } else {
             setHeaderBg(headerBgHome);
+            setHeaderTxt("Clean Blog");
+            setHeaderSubTxt("A Blog Theme by Start Bootstrap");
         }
     }, [location.pathname]);
     return (
         <>
             <nav ref={navRef} className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container px-4 px-lg-5">
-                    <a className="navbar-brand" href="index.html">Start Bootstrap</a>
+                    <Link className="navbar-brand" to="/">Start Bootstrap</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
                         <i className="fas fa-bars"></i>
